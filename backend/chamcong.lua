@@ -35,8 +35,25 @@ function M.raca()
   return true
 end
 
+function M.timPhienTheoMa(ma)
+  for _, p in ipairs(Phien.dsphien) do
+    if p.maphien == ma then
+      return p
+    end
+  end
+  return nil
+end
+
 function M.napphien(t)
   Phien = t
+end
+
+function M.xoadsphien()
+  Phien.dsphien = {}
+end
+
+function M.xoaphienhientai()
+  Phien.phienhientai = nil
 end
 
 function M.Phien()

@@ -10,7 +10,10 @@ M.state = {
   run = true,
   ui = "menu",
   coPhien = false,
-  Phien = chamcong.Phien()
+  Phien = chamcong.Phien(),
+  trang = 1,
+  tongsotrang = 0,
+  luong = 0
 }
 
 return M
