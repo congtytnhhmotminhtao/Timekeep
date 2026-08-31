@@ -10,30 +10,20 @@ local tainguyen = {
   file = {"dulieuphien.ltn", "setting.ltn"}
 }
 
-local function coFile(path)
-  local f = io.open(path, "r")
-  if not f then
-    return false
-  end
-  f:close()
-  return true
-end
-
 --public
 function M.filecoban()
   for i = 1, #tainguyen.path do
-    if not coFile(tainguyen.path[i]) then
+    if not qlf.getpath(tainguyen.file[i]) then
+      os.execute("mkdir -p " .. tainguyen.folder[i])
       qlf.taofile(tainguyen.file[i])
-      if tainguyen.file[1] then
-        qlf.ghidefile(tainguyen.file[1], ltn.mahoa(chamcong.Phien(), true))
+      if i == 1 then
+        qlf.ghidefile(tainguyen.file[i], ltn.mahoa(chamcong.Phien(), true))
+      elseif i == 2 then
+        qlf.ghidefile(tainguyen.file[i], "COMMING SOON!")
       end
       qlf.dichuyenfile(tainguyen.file[i], tainguyen.folder[i])
     end
   end
-end
-
-function M.phien()
-  
 end
 
 return M
