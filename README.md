@@ -5,6 +5,9 @@ Personal time-tracking CLI app, written in pure Lua, running on Termux (Android)
 
 Dev by **caothu9ok**
 
+> ⚠️ **Chỉ hỗ trợ Linux và Android (Termux)** — chương trình dùng lệnh shell Unix (`mkdir -p`, `find`, `clear`) và dấu `/` cho đường dẫn. **Không chạy được trên Windows** (trừ khi qua WSL).
+> ⚠️ **Linux and Android (Termux) only** — the app relies on Unix shell commands (`mkdir -p`, `find`, `clear`) and forward-slash (`/`) paths. **Does not run on Windows** (unless via WSL).
+
 ---
 
 ## Chạy chương trình / Run
